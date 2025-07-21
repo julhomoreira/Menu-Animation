@@ -22,6 +22,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .navbar ul{
@@ -47,7 +48,53 @@ body{
     
 }
 
-.navbar ul li a {
+.navbar ul li a i{
     color:blueviolet;
     font-size: 40px;
+    position: absolute;
+}
+
+.activeicon{
+    opacity: 0;
+}
+
+.navbar ul li.active-list a i{
+    opacity: 1;
+}
+
+.indicator{
+    position: absolute;
+    background-color: blueviolet;
+    width: 25px;
+    height: 36px;
+    bottom: -19px;
+    left: 34px;
+    border-radius: 50%;
+   
+}
+
+.indicator::before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: 50%;
+    width: 20px;
+    height: 22px;
+    background-color:white;
+
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 0 blueviolet;
+}
+
+.indicator::after{
+    content: '';
+    position: absolute;
+    right: -15px;
+    bottom: 50%;
+    width: 20px;
+    height: 22px;
+    background-color:white;
+
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 0 blueviolet;
 }
