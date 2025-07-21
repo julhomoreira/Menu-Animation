@@ -34,6 +34,7 @@ body{
 .navbar ul li {
     position: relative;
     list-style-type: none;
+    
 
 }
 
@@ -50,12 +51,16 @@ body{
 
 .navbar ul li a i{
     color:blueviolet;
-    font-size: 40px;
+    font-size: 50px;
     position: absolute;
+        overflow: hidden;
+
 }
 
 .activeicon{
     opacity: 0;
+    transition: all 0.6s ease;
+    transition-delay: 0.2;
 }
 
 .navbar ul li.active-list a i{
@@ -64,36 +69,37 @@ body{
 
 .indicator{
     position: absolute;
-    background-color: blueviolet;
-    width: 25px;
-    height: 36px;
     bottom: -19px;
     left: 34px;
+    width: 25px;
+    height: 36px;
+    background: blueviolet;
     border-radius: 50%;
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
    
 }
 
 .indicator::before{
-    content: '';
+    content:"";
     position: absolute;
     left: -15px;
     bottom: 50%;
     width: 20px;
     height: 22px;
-    background-color:white;
+   
 
     border-bottom-right-radius: 20px;
     box-shadow: 0 10px 0 blueviolet;
 }
 
 .indicator::after{
-    content: '';
+    content: "";
     position: absolute;
     right: -15px;
     bottom: 50%;
     width: 20px;
     height: 22px;
-    background-color:white;
+  
 
     border-bottom-left-radius: 20px;
     box-shadow: 0 10px 0 blueviolet;
